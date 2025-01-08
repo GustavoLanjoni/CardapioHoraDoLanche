@@ -9,6 +9,8 @@ function loadCart() {
         return;
     }
 
+    let total = 0; // Inicializa a variável do total
+
     cart.forEach((item, index) => {
         cartDisplay.innerHTML += `
             <div class="cart-item">
@@ -26,7 +28,17 @@ function loadCart() {
                 <button onclick="removeFromCart(${index})">Remover</button>
             </div>
         `;
+        
+        // Soma o total do carrinho (preço * quantidade)
+        total += item.preco * (item.quantidade || 1);
     });
+
+    // Exibe o total
+    cartDisplay.innerHTML += `
+        <div class="cart-total">
+            <h3>Total: R$ ${total.toFixed(2)}</h3>
+        </div>
+    `;
 }
 
 // Função para alterar a quantidade
@@ -42,7 +54,6 @@ function changeQuantity(index, change) {
     }
 }
 
-
 // Função para remover item do carrinho
 function removeFromCart(index) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -50,7 +61,6 @@ function removeFromCart(index) {
     localStorage.setItem('cart', JSON.stringify(cart)); // Salva a lista de novo
     loadCart(); // Recarrega o carrinho com os itens restantes
 }
-
 
 // Inicializa os itens ao carregar a página
 document.addEventListener('DOMContentLoaded', loadCart);
