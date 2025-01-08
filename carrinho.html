@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+    <link rel="stylesheet" href="css/carrinho.css">
+    <script src="js/carrinho.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>🛒 Carrinho</h1>
+        <a href="index.html">← Voltar para Cardápio</a>
+    </header>
+    
+    <main>
+        <section id="cart">
+            <h2>Seus Itens</h2>
+            <div id="cart-display"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <button onclick="sendToWhatsApp()" style="margin-top: 10px; background: #25D366; color: #fff;">
+            Enviar Pedido para WhatsApp
+        </button>
+    </footer>
+
+    <script>
+        // Função para carregar os itens do carrinho
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let cartDisplay = document.getElementById('cart-display');
+            cartDisplay.innerHTML = ''; // Limpa antes de renderizar
+
+            if (cart.length === 0) {
+                cartDisplay.innerHTML = '<p>O carrinho está vazio.</p>';
+                return;
+            }
+
+            cart.forEach((item, index) => {
+                cartDisplay.innerHTML += `
+            <div class="cart-item">
+                <img src="${item.imagem}" alt="${item.nome}" width="100">
+                <h3>${item.nome}</h3>
+                <p>${item.descricao}</p>
+                <p>R$ ${item.preco.toFixed(2)}</p>
+                <button onclick="removeFromCart(${index})">Remover</button>
+            </div>
+        `;
+            });
+        }
+
+        // Função para remover item do carrinho
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1); // Remove pelo índice
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart(); // Recarrega os itens
+        }
+
+        // Inicializa os itens ao carregar a página
+        document.addEventListener('DOMContentLoaded', loadCart);
+
+    </script>
+</body>
+</html>
