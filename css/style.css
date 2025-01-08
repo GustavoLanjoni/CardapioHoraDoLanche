@@ -66,9 +66,10 @@ header {
 /* Banner */
 .banner {
     text-align: center;
-    background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
     color: #fff;
-    padding: 80px 20px;
+    height: 100%;
+    width: 100%;
+    
 }
 
 .banner h2 {
