@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/script.js" defer></script>
 </head>
+
 <body>
     <!-- Navbar -->
     <header>
@@ -15,9 +17,10 @@
             <button class="menu-toggle" aria-label="Abrir Menu">&#9776;</button>
             <nav>
                 <ul>
-                    <li><a href="#burgers">Burgers</a></li>
+                    <li><a href="#lanches">Lanches</a></li>
+                    <li><a href="#miniSalgados">Mini Salgados</a></li>
+                    <li><a href="#porcoes">Porções</a></li>
                     <li><a href="#bebidas">Bebidas</a></li>
-                    <li><a href="#sobremesas">Sobremesas</a></li>
                 </ul>
             </nav>
         </div>
@@ -25,61 +28,106 @@
 
     <!-- Banner -->
     <section class="banner">
-        <img src="img/ESPECIAL.png" alt="">
+        <img src="img/ESPECIAL .png" alt="">
     </section>
 
     <!-- Seções do Cardápio -->
     <main>
-        <!-- Burgers -->
-        <section id="burgers" class="menu-section">
-            <h2>🍔 Burgers</h2>
+        <!-- Lanches -->
+        <section id="lanches" class="menu-section">
+            <h2>
+                <img src="img/burguer.png" alt="Ícone Lanches" class="section-icon">
+                Lanches
+            </h2>
             <div class="menu-items">
-                <div class="card" onclick="showDetails('Burger Clássico', 'Delicioso burger com queijo, alface e tomate.')">
+                <div class="card"
+                    onclick="showDetails('Burger Clássico', 'Delicioso burger com queijo, alface e tomate.')">
                     <img src="https://via.placeholder.com/150" alt="Burger">
                     <h3>Burger Clássico</h3>
                     <p>R$ 15,90</p>
-                    <button><a href="#">Comprar</button></a>
+                    <button><a href="#">Comprar</a></button>
                 </div>
-                <div class="card" onclick="showDetails('Burger Duplo', 'Dois hambúrgueres suculentos com queijo derretido.')">
-                    <img src="https://via.placeholder.com/150" alt="Burger Duplo">
-                    <h3>Burger Duplo</h3>
-                    <p>R$ 22,90</p>
-                    <button><a href="#">Comprar</button></a>
+            </div>
+
+            <div class="menu-items">
+                <div class="card"
+                    onclick="showDetails('Burger Clássico', 'Delicioso burger com queijo, alface e tomate.')">
+                    <img src="https://via.placeholder.com/150" alt="Burger">
+                    <h3>Burger Clássico</h3>
+                    <p>R$ 15,90</p>
+                    <button><a href="#">Comprar</a></button>
+                </div>
+            </div>
+
+            <div class="menu-items">
+                <div class="card"
+                    onclick="showDetails('Burger Clássico', 'Delicioso burger com queijo, alface e tomate.')">
+                    <img src="https://via.placeholder.com/150" alt="Burger">
+                    <h3>Burger Clássico</h3>
+                    <p>R$ 15,90</p>
+                    <button><a href="#">Comprar</a></button>
+                </div>
+            </div>
+
+            <div class="menu-items">
+                <div class="card"
+                    onclick="showDetails('Burger Clássico', 'Delicioso burger com queijo, alface e tomate.')">
+                    <img src="https://via.placeholder.com/150" alt="Burger">
+                    <h3>Burger Clássico</h3>
+                    <p>R$ 15,90</p>
+                    <button><a href="#">Comprar</a></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mini Salgados -->
+        <section id="miniSalgados" class="menu-section">
+            <h2>
+                <img src="img/salgadinhos.png" alt="Ícone Mini Salgados" class="section-icon">
+                Mini Salgados
+            </h2>
+            <div class="menu-items">
+                <div class="card" onclick="showDetails('Coxinha', 'Mini coxinhas crocantes.')">
+                    <img src="https://via.placeholder.com/150" alt="Coxinha">
+                    <h3>Coxinha</h3>
+                    <p>R$ 4,50</p>
+                    <button><a href="#">Comprar</a></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Porções -->
+        <section id="porcoes" class="menu-section">
+            <h2>
+                <img src="img/batatas-fritas.png" alt="Ícone Porções" class="section-icon">
+                Porções
+            </h2>
+            <div class="menu-items">
+                <div class="card" onclick="showDetails('Batata Frita', 'Porção de batata frita crocante.')">
+                    <img src="https://via.placeholder.com/150" alt="Batata Frita">
+                    <h3>Batata Frita</h3>
+                    <p>R$ 12,00</p>
+                    <button><a href="#">Comprar</a></button>
                 </div>
             </div>
         </section>
 
         <!-- Bebidas -->
         <section id="bebidas" class="menu-section">
-            <h2>🥤 Bebidas</h2>
+            <h2>
+                <img src="img/refrigerantes.png" alt="Ícone Bebidas" class="section-icon">
+                Bebidas
+            </h2>
             <div class="menu-items">
                 <div class="card" onclick="showDetails('Refrigerante', 'Lata de refrigerante gelada.')">
                     <img src="https://via.placeholder.com/150" alt="Refrigerante">
                     <h3>Refrigerante</h3>
                     <p>R$ 5,00</p>
-                    <button><a href="#">Comprar</button></a>
-                </div>
-                <div class="card" onclick="showDetails('Suco Natural', 'Suco natural de laranja.')">
-                    <img src="https://via.placeholder.com/150" alt="Suco">
-                    <h3>Suco Natural</h3>
-                    <p>R$ 8,00</p>
-                    <button><a href="#">Comprar</button></a>
+                    <button><a href="#">Comprar</a></button>
                 </div>
             </div>
         </section>
 
-        <!-- Sobremesas -->
-        <section id="sobremesas" class="menu-section">
-            <h2>🍰 Sobremesas</h2>
-            <div class="menu-items">
-                <div class="card" onclick="showDetails('Bolo de Chocolate', 'Fatias de bolo com cobertura cremosa.')">
-                    <img src="https://via.placeholder.com/150" alt="Bolo">
-                    <h3>Bolo de Chocolate</h3>
-                    <p>R$ 7,50</p>
-                    <button><a href="#">Comprar</button></a>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Pop-up Detalhes -->
@@ -96,4 +144,5 @@
         <p>&copy; 2024 Lanchonete do Gustavo. Todos os direitos reservados.</p>
     </footer>
 </body>
+
 </html>
