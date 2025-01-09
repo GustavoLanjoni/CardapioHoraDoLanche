@@ -10,14 +10,17 @@
 </head>
 <body>
     <header>
-        <h1>🛒 Carrinho</h1>
+        <h1>🛒 Carrinho (<span id="cart-count">0</span> itens)</h1>
         <a href="index.html">← Voltar para Cardápio</a>
     </header>
     
     <main>
         <section id="cart">
             <h2>Seus Itens</h2>
-            <div id="cart-display"></div>
+            <div id="cart-display"></div> <!-- Onde os itens vão aparecer -->
+            <div id="cart-total">
+                <h3>Total: R$ <span id="total-price">0.00</span></h3>
+            </div>
         </section>
     </main>
 
@@ -26,52 +29,5 @@
             Enviar Pedido para WhatsApp
         </button>
     </footer>
-
-    <script>
-        // Função para carregar os itens do carrinho
-        function loadCart() {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            let cartDisplay = document.getElementById('cart-display');
-            cartDisplay.innerHTML = ''; // Limpa antes de renderizar
-
-            if (cart.length === 0) {
-                cartDisplay.innerHTML = '<p>O carrinho está vazio.</p>';
-                return;
-            }
-
-            let total = 0; // Inicializa a variável do total
-
-            cart.forEach((item, index) => {
-                cartDisplay.innerHTML += `
-                    <div class="cart-item">
-                        <img src="${item.imagem}" alt="${item.nome}" width="100">
-                        <h3>${item.nome}</h3>
-                        <p>${item.descricao}</p>
-                        <p>R$ ${item.preco.toFixed(2)}</p>
-                        <button onclick="removeFromCart(${index})">Remover</button>
-                    </div>
-                `;
-                total += item.preco * (item.quantidade || 1); // Soma o total
-            });
-
-            // Exibe o total
-            cartDisplay.innerHTML += `
-                <div class="cart-total">
-                    <h3>Total: R$ ${total.toFixed(2)}</h3>
-                </div>
-            `;
-        }
-
-        // Função para remover item do carrinho
-        function removeFromCart(index) {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart.splice(index, 1); // Remove pelo índice
-            localStorage.setItem('cart', JSON.stringify(cart));
-            loadCart(); // Recarrega os itens
-        }
-
-        // Inicializa os itens ao carregar a página
-        document.addEventListener('DOMContentLoaded', loadCart);
-    </script>
 </body>
 </html>
