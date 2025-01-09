@@ -573,23 +573,7 @@
         </div>
     </footer>
 
-    <script>
-        // Captura os botões "Adicionar ao Carrinho" e adiciona o evento de clique
-        document.querySelectorAll('.add-to-cart').forEach(button => {
-            button.addEventListener('click', (event) => {
-                // Pega os dados do produto
-                const button = event.target;
-                const name = button.getAttribute('data-name');
-                const price = parseFloat(button.getAttribute('data-price'));
-                const image = button.getAttribute('data-image');
-                const description = button.getAttribute('data-description');
-
-                // Adiciona o produto ao carrinho
-                addToCart(name, price, image, description);
-            });
-        });
-
-    </script>
+  
 </body>
 
 </html>
