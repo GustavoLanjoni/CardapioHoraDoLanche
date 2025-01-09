@@ -7,6 +7,7 @@
     <title>Hora Do Lanche</title>
 </head>
 <body>
+
     <header class="header">
         <div class="logo">
             <h1>Hora Do Lanche</h1>
@@ -20,32 +21,209 @@
     </header>
 
     <main class="menu">
-        <h2>Cardápio</h2>
+        <h2 class="h2-cardapio">Cardápio</h2>
         <div class="menu-items">
             <!-- Exemplo de item de menu -->
             <div class="menu-item">
-                <img src="images/xburguer.jpg" alt="X-Burguer" class="menu-item-image">
+                <img src="img/burguer.png"X-Burguer" class="menu-item-image">
                 <div class="menu-item-info">
-                    <h3>X-Burguer</h3>
-                    <p>Delicioso hambúrguer com queijo e molho especial.</p>
+                    <h3>HotDog</h3>
+                    <p>Pão, Carne, Salsicha, Batata Palha, Ketchup, Maionese, Mostarda</p>
+                    <span class="price">R$ 10,00</span>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" data-action="decrease">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="quantity-btn" data-action="increase">+</button>
+                    </div>
+                        <button class="add-to-cart" data-name="HotDog" data-price="10.00" data-image="img/burguer.png">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/burguer.png" alt="HotDogEspecial" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>HotDog Especial</h3>
+                    <p>Pão, Carne, Sasicha, Presunto, Queijo, Bacon, Batata Palha, Ketchup, Maionese, Mostarda</p>
+                    <span class="price">R$ 14,00</span>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" data-action="decrease">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="quantity-btn" data-action="increase">+</button>
+                    </div>
+                    <button class="add-to-cart" data-name="HotDogEspecial" data-price="14.00" data-image="img/burguer.png">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/burguer.png" alt="HotDogEspecialBacon" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>HotDog Especial Bacon</h3>
+                    <p>Pão, Carne, Salsicha, Presunto, Queijo, Bacon, Batata Palha, Ketchup, Maionese, Mostarda</p>
+                    <span class="price">R$ 16,00</span>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" data-action="decrease">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="quantity-btn" data-action="increase">+</button>
+                    </div>
+                    <button class="add-to-cart" data-name="HotDogEspecialBacon" data-price="16.00" data-image="images/xburguer.jpg">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/burguer.png" alt="CadelaQuente" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>Cadela Quente</h3>
+                    <p>Pão, Carne, Presunto, Cheddar, Bacon, Alface, Tomate, Ketchup, Maionese, Mostarda</p>
                     <span class="price">R$ 12,00</span>
                     <div class="quantity-control">
                         <button class="quantity-btn" data-action="decrease">-</button>
                         <input type="number" class="quantity" value="1" min="1">
                         <button class="quantity-btn" data-action="increase">+</button>
                     </div>
-                    <button class="add-to-cart" data-name="X-Burguer" data-price="12.00" data-image="images/xburguer.jpg">Adicionar ao Carrinho</button>
+                    <button class="add-to-cart" data-name="CadelaQuente" data-price="12.00" data-image="images/xburguer.jpg">Adicionar ao Carrinho</button>
                 </div>
             </div>
-            <!-- Outros itens do cardápio aqui -->
+
+            <div class="menu-item">
+                <img src="img/burguer.png" alt="ModaDaCasa" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>Moda Da Casa</h3>
+                    <p>Pão, Hambúrgue, Queijo, Presunto, Cheddar, Bacon, Alface, Tomate, Ketchup, Maionese, Mostarda</p>
+                    <span class="price">R$ 20,00</span>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" data-action="decrease">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="quantity-btn" data-action="increase">+</button>
+                    </div>
+                    <button class="add-to-cart" data-name="ModaDaCasa" data-price="20.00" data-image="images/xburguer.jpg">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            
+        <div class="menu-item">
+            <img src="img/burguer.png" alt="Americano" class="menu-item-image">
+            <div class="menu-item-info">
+                <h3>Americano</h3>
+                <p>Pão, Hambúrgue, Tomate, Presunto, Queijo, Ketchup, Maionese, Mostarda</p>
+                <span class="price">R$ 10,00</span>
+                <div class="quantity-control">
+                    <button class="quantity-btn" data-action="decrease">-</button>
+                    <input type="number" class="quantity" value="1" min="1">
+                    <button class="quantity-btn" data-action="increase">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Americano" data-price="10.00" data-image="img/refrigerante.png">Adicionar ao Carrinho</button>
+            </div>
         </div>
+
+        <div class="menu-item">
+            <img src="img/burguer.png" alt="MistoQuente" class="menu-item-image">
+            <div class="menu-item-info">
+                <h3>Misto Quente</h3>
+                <p>Mussarela, Presunto, Tomate, Maionese, Ketchup</p>
+                <span class="price">R$ 12,00</span>
+                <div class="quantity-control">
+                    <button class="quantity-btn" data-action="decrease">-</button>
+                    <input type="number" class="quantity" value="1" min="1">
+                    <button class="quantity-btn" data-action="increase">+</button>
+                </div>
+                <button class="add-to-cart" data-name="MistoQuente" data-price="12.00" data-image="img/refrigerante.png">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        </div>
+
+          <!-- Nova seção de lanches -->
+    <h2 class="h2-x">Linha X</h2>
+    <div class="menu-items">
+        <div class="menu-item">
+            <img src="img/burguer.png" alt="X-Tudo" class="menu-item-image">
+            <div class="menu-item-info">
+                <h3>X-Tudo</h3>
+                <p>Pão, Hambúrgue, Alface, Tomate, Presunto, Queijo, Bacon, Ovo, Batata Palha, Ketchup, Maionese, Mostarda</p>
+                <span class="price">R$ 19,00</span>
+                <div class="quantity-control">
+                    <button class="quantity-btn" data-action="decrease">-</button>
+                    <input type="number" class="quantity" value="1" min="1">
+                    <button class="quantity-btn" data-action="increase">+</button>
+                </div>
+                <button class="add-to-cart" data-name="X-Tudo" data-price="19.00" data-image="img/suco.png">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="img/burguer.png" alt="X-Bacon" class="menu-item-image">
+            <div class="menu-item-info">
+                <h3>X-Bacon</h3>
+                <p>Pão, Hambúrgue, Bacon, Alface, Tomate, Presunto, Queijo, Batata Palha, Ketchup, Maionese, Mostarda</p>
+                <span class="price">R$ 18,00</span>
+                <div class="quantity-control">
+                    <button class="quantity-btn" data-action="decrease">-</button>
+                    <input type="number" class="quantity" value="1" min="1">
+                    <button class="quantity-btn" data-action="increase">+</button>
+                </div>
+                <button class="add-to-cart" data-name="X-Bacon" data-price="18.00" data-image="img/refrigerante.png">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="img/burguer.png" alt="X-Salada" class="menu-item-image">
+            <div class="menu-item-info">
+                <h3>X-Salada</h3>
+                <p>Pão, Hambúrgue, Alface, Tomate, Presunto, Queijo, Batata Palha, Ketchup, Maionese, Mostarda</p>
+                <span class="price">R$ 14,00</span>
+                <div class="quantity-control">
+                    <button class="quantity-btn" data-action="decrease">-</button>
+                    <input type="number" class="quantity" value="1" min="1">
+                    <button class="quantity-btn" data-action="increase">+</button>
+                </div>
+                <button class="add-to-cart" data-name="X-Salada" data-price="14.00" data-image="img/refrigerante.png">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="img/burguer.png" alt="X-EGG" class="menu-item-image">
+            <div class="menu-item-info">
+                <h3>X-EGG</h3>
+                <p>Pão, Hambúrgue, Alface, Tomate, Queijo, Ovo, Batata Palha, Ketchup, Maionese, Mostarda</p>
+                <span class="price">R$ 18,00</span>
+                <div class="quantity-control">
+                    <button class="quantity-btn" data-action="decrease">-</button>
+                    <input type="number" class="quantity" value="1" min="1">
+                    <button class="quantity-btn" data-action="increase">+</button>
+                </div>
+                <button class="add-to-cart" data-name="X-EGG" data-price="18.00" data-image="img/refrigerante.png">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="img/burguer.png" alt="X-Pizza" class="menu-item-image">
+            <div class="menu-item-info">
+                <h3>X-Pizza</h3>
+                <p>Pão, Hambúrgue, Tomate, Presunto, Queijo, Oregano, Ketchup, Maionese, Mostarda</p>
+                <span class="price">R$ 12,00</span>
+                <div class="quantity-control">
+                    <button class="quantity-btn" data-action="decrease">-</button>
+                    <input type="number" class="quantity" value="1" min="1">
+                    <button class="quantity-btn" data-action="increase">+</button>
+                </div>
+                <button class="add-to-cart" data-name="X-Pizza" data-price="12.00" data-image="img/refrigerante.png">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+
+        
+    </div>
     </main>
+
+    <!--Mensagem de Sucesso-->
+    <div id="success-message" class="success-message hidden">Produto adicionado ao carrinho!</div>
+
 
     <footer class="footer">
         <p>&copy; 2025 Hora Do Lanche. Todos os direitos reservados.</p>
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/mensagem.js"></script>
     <script>
         // Função para adicionar o item ao carrinho
         function adicionarAoCarrinho(item) {

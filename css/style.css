@@ -52,10 +52,18 @@ main {
     text-align: center;
 }
 
-.menu h2 {
+.h2-cardapio {
     font-size: 28px;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    
+}
+
+.h2-x  {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+    margin-top: 60px;
 }
 
 .menu-items {
@@ -233,6 +241,31 @@ main {
     background-color: #218838;
 }
 
+.success-message {
+    position: fixed;
+    top: 50%; /* Centralizado verticalmente */
+    left: 50%; /* Centralizado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar a posição para o centro */
+    background-color: #4CAF50; /* Verde para indicar sucesso */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    z-index: 1000;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.success-message.visible {
+    opacity: 1; /* Tornar visível */
+}
+
+.hidden {
+    display: none; /* Ocultar completamente */
+}
+
+
 footer {
     background-color: #28a745;
     color: white;
@@ -241,3 +274,5 @@ footer {
     margin-top: 40px;
     font-size: 14px;
 }
+
+
