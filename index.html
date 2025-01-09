@@ -1,579 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-
-    <title>Cardápio de Lanchonete</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
-    <script src="js/minisalgasdos.js"></script>
-
+    <title>Hora Do Lanche</title>
 </head>
-
 <body>
-    <header>
-        <div class="navbar">
-            <h1>Hora do Lanche</h1>
-            <button class="menu-toggle" aria-label="Abrir Menu">&#9776;</button>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Cardapio</a></li>
-                    <li><a href="sobre.html">Sobre Nos</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-
-                </ul>
-            </nav>
-
-            <!-- Ícone do Carrinho -->
-            <div class="cart-icon">
-                <a href="carrinho.html">
-                    <img width="30" src="img/carrinho-de-compras.png" alt="Carrinho">
-                    <span id="cart-count">0</span>
-                </a>
-            </div>
-
+    <header class="header">
+        <div class="logo">
+            <h1>Hora Do Lanche</h1>
         </div>
+        <nav>
+            <a href="carrinho.html" class="cart-link">
+                <img src="img/carrinho-de-compras.png" alt="Carrinho">
+                <span class="cart-count" id="cart-count">0</span> <!-- Mostra a quantidade de itens -->
+            </a>
+        </nav>
     </header>
 
-    <!-- Banner -->
-    <section class="banner">
-        <img src="img/ESPECIAL .png" alt="Banner Especial">
-    </section>
-
-    <!-- Cardápio -->
-    <main>
-        <!--Lanches -->
-        <section id="lanches" class="menu-section">
-            <h2><img src="img/burguer.png" alt="Lanches" class="section-icon"> Lanches</h2>
-            <div class="menu-items">
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>HotDog</h3>
-                    <p>R$ 10,00</p>
-                    <p class="descricao">Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda</p>
-                    <button
-                        onclick="addToCart('Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda', 10.00)">
-                        Adicionar ao Carrinho
-                    </button>
-
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>HotDog</h3>
-                    <p>R$ 10,00</p>
-                    <p class="descricao">Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda</p>
-                    <button
-                        onclick="addToCart('Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda', 10.00)">
-                        Adicionar ao Carrinho
-                    </button>
-
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>HotDog</h3>
-                    <p>R$ 10,00</p>
-                    <p class="descricao">Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda</p>
-                    <button
-                        onclick="addToCart('Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda', 10.00)">
-                        Adicionar ao Carrinho
-                    </button>
-
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>HotDog</h3>
-                    <p>R$ 10,00</p>
-                    <p class="descricao">Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda</p>
-                    <button
-                        onclick="addToCart('Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda', 10.00)">
-                        Adicionar ao Carrinho
-                    </button>
-
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>HotDog</h3>
-                    <p>R$ 10,00</p>
-                    <p class="descricao">Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda</p>
-                    <button
-                        onclick="addToCart('Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda', 10.00)">
-                        Adicionar ao Carrinho
-                    </button>
+    <main class="menu">
+        <h2>Cardápio</h2>
+        <div class="menu-items">
+            <!-- Exemplo de item de menu -->
+            <div class="menu-item">
+                <img src="images/xburguer.jpg" alt="X-Burguer" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>X-Burguer</h3>
+                    <p>Delicioso hambúrguer com queijo e molho especial.</p>
+                    <span class="price">R$ 12,00</span>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" data-action="decrease">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="quantity-btn" data-action="increase">+</button>
+                    </div>
+                    <button class="add-to-cart" data-name="X-Burguer" data-price="12.00" data-image="images/xburguer.jpg">Adicionar ao Carrinho</button>
                 </div>
             </div>
-        </section>
-
-
-        <!-- X -->
-        <section id="" class="menu-section">
-            <h2>Lanches X</h2>
-            <div class="menu-items">
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>HotDog</h3>
-                    <p>R$ 10,00</p>
-                    <p class="descricao">Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda</p>
-                    <button
-                        onclick="addToCart('Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda', 10.00)">
-                        Adicionar ao Carrinho
-                    </button>
-
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>HotDog</h3>
-                    <p>R$ 10,00</p>
-                    <p class="descricao">Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda</p>
-                    <button
-                        onclick="addToCart('Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda', 10.00)">
-                        Adicionar ao Carrinho
-                    </button>
-
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>HotDog</h3>
-                    <p>R$ 10,00</p>
-                    <p class="descricao">Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda</p>
-                    <button
-                        onclick="addToCart('Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda', 10.00)">
-                        Adicionar ao Carrinho
-                    </button>
-
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>HotDog</h3>
-                    <p>R$ 10,00</p>
-                    <p class="descricao">Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda</p>
-                    <button
-                        onclick="addToCart('Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda', 10.00)">
-                        Adicionar ao Carrinho
-                    </button>
-
-                </div>
-
-
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>HotDog</h3>
-                    <p>R$ 10,00</p>
-                    <p class="descricao">Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda</p>
-                    <button
-                        onclick="addToCart('Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda', 10.00)">
-                        Adicionar ao Carrinho
-                    </button>
-
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>HotDog</h3>
-                    <p>R$ 10,00</p>
-                    <p class="descricao">Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda</p>
-                    <button
-                        onclick="addToCart('Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda', 10.00)">
-                        Adicionar ao Carrinho
-                    </button>
-
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>HotDog</h3>
-                    <p>R$ 10,00</p>
-                    <p class="descricao">Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda</p>
-                    <button
-                        onclick="addToCart('Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda', 10.00)">
-                        Adicionar ao Carrinho
-                    </button>
-
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>HotDog</h3>
-                    <p>R$ 10,00</p>
-                    <p class="descricao">Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda</p>
-                    <button
-                        onclick="addToCart('Pao, Carne, Salsicha, batata Palha, Ketchup, Maionese, Mostarda', 10.00)">
-                        Adicionar ao Carrinho
-                    </button>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Mini Salgados -->
-        <section id="mini-salgados" class="menu-section">
-            <h2><img src="img/salgadinhos.png" alt="Lanches" class="section-icon"> Mini Salgados</h2>
-            <div class="menu-items">
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Carne</h3>
-                    <p class="descricao-toggle" onclick="toggleDescricao(this)">Selecionar Quantidade ▼</p>
-                    <div class="descricao-opcoes">
-                        <label><input type="radio" name="carne" value="300g" data-preco="12.00"> 300g - R$
-                            12,00</label><br>
-                        <label><input type="radio" name="carne" value="500g" data-preco="20.00"> 500g - R$
-                            20,00</label><br>
-                        <label><input type="radio" name="carne" value="1kg" data-preco="35.00"> 1kg - R$ 35,00</label>
-                    </div>
-                    <button onclick="addToCart('Carne')">Adicionar ao Carrinho</button>
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Kibe</h3>
-                    <p class="descricao-toggle" onclick="toggleDescricao(this)">Ver opções ▼</p>
-                    <div class="descricao-opcoes">
-                        <label><input type="radio" name="carne" value="300g" data-preco="12.00"> 300g - R$
-                            12,00</label><br>
-                        <label><input type="radio" name="carne" value="500g" data-preco="20.00"> 500g - R$
-                            20,00</label><br>
-                        <label><input type="radio" name="carne" value="1kg" data-preco="35.00"> 1kg - R$ 35,00</label>
-                    </div>
-                    <button onclick="addToCart('Kibe')">Adicionar ao Carrinho</button>
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Pizza</h3>
-                    <p class="descricao-toggle" onclick="toggleDescricao(this)">Ver opções ▼</p>
-                    <div class="descricao-opcoes">
-                        <label><input type="radio" name="carne" value="300g" data-preco="12.00"> 300g - R$
-                            12,00</label><br>
-                        <label><input type="radio" name="carne" value="500g" data-preco="20.00"> 500g - R$
-                            20,00</label><br>
-                        <label><input type="radio" name="carne" value="1kg" data-preco="35.00"> 1kg - R$ 35,00</label>
-                    </div>
-                    <button onclick="addToCart('Kibe')">Adicionar ao Carrinho</button>
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Frango</h3>
-                    <p class="descricao-toggle" onclick="toggleDescricao(this)">Ver opções ▼</p>
-                    <div class="descricao-opcoes">
-                        <label><input type="radio" name="carne" value="300g" data-preco="12.00"> 300g - R$
-                            12,00</label><br>
-                        <label><input type="radio" name="carne" value="500g" data-preco="20.00"> 500g - R$
-                            20,00</label><br>
-                        <label><input type="radio" name="carne" value="1kg" data-preco="35.00"> 1kg - R$ 35,00</label>
-                    </div>
-                    <button onclick="addToCart('Kibe')">Adicionar ao Carrinho</button>
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Salcicha</h3>
-                    <p class="descricao-toggle" onclick="toggleDescricao(this)">Ver opções ▼</p>
-                    <div class="descricao-opcoes">
-                        <label><input type="radio" name="carne" value="300g" data-preco="12.00"> 300g - R$
-                            12,00</label><br>
-                        <label><input type="radio" name="carne" value="500g" data-preco="20.00"> 500g - R$
-                            20,00</label><br>
-                        <label><input type="radio" name="carne" value="1kg" data-preco="35.00"> 1kg - R$ 35,00</label>
-                    </div>
-                    <button onclick="addToCart('Kibe')">Adicionar ao Carrinho</button>
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Queijo</h3>
-                    <p class="descricao-toggle" onclick="toggleDescricao(this)">Ver opções ▼</p>
-                    <div class="descricao-opcoes">
-                        <label><input type="radio" name="carne" value="300g" data-preco="12.00"> 300g - R$
-                            12,00</label><br>
-                        <label><input type="radio" name="carne" value="500g" data-preco="20.00"> 500g - R$
-                            20,00</label><br>
-                        <label><input type="radio" name="carne" value="1kg" data-preco="35.00"> 1kg - R$ 35,00</label>
-                    </div>
-                    <button onclick="addToCart('Kibe')">Adicionar ao Carrinho</button>
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Calabresa</h3>
-                    <p class="descricao-toggle" onclick="toggleDescricao(this)">Ver opções ▼</p>
-                    <div class="descricao-opcoes">
-                        <label><input type="radio" name="carne" value="300g" data-preco="12.00"> 300g - R$
-                            12,00</label><br>
-                        <label><input type="radio" name="carne" value="500g" data-preco="20.00"> 500g - R$
-                            20,00</label><br>
-                        <label><input type="radio" name="carne" value="1kg" data-preco="35.00"> 1kg - R$ 35,00</label>
-                    </div>
-                    <button onclick="addToCart('Kibe')">Adicionar ao Carrinho</button>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Porções -->
-        <section id="porcoes" class="menu-section">
-            <h2><img src="img/batatas-fritas.png" alt="Lanches" class="section-icon"> Batatas Fritas</h2>
-            <div class="menu-items">
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Queijo</h3>
-                    <p class="descricao-toggle" onclick="toggleDescricao(this)">Selecionar Quantidade ▼</p>
-                    <div class="descricao-opcoes">
-                        <label><input type="radio" name="Queijo" value="300g" data-preco="12.00"> 300g -
-                            R$12,00</label><br>
-                        <label><input type="radio" name="Queijo" value="500g" data-preco="17.00"> 500g - R$
-                            17,00</label><br>
-                        <label><input type="radio" name="Queijo" value="750g" data-preco="23.00"> 750g - R$
-                            23,00</label>
-                    </div>
-                    <button onclick="addToCart('Carne')">Adicionar ao Carrinho</button>
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Bacon</h3>
-                    <p class="descricao-toggle" onclick="toggleDescricao(this)">Selecionar Quantidade ▼</p>
-                    <div class="descricao-opcoes">
-                        <label><input type="radio" name="Bacon" value="300g" data-preco="12.00"> 300g -
-                            R$12,00</label><br>
-                        <label><input type="radio" name="Bacon" value="500g" data-preco="17.00"> 500g - R$
-                            17,00</label><br>
-                        <label><input type="radio" name="Bacon" value="750g" data-preco="23.00"> 750g - R$ 23,00</label>
-                    </div>
-                    <button onclick="addToCart('Carne')">Adicionar ao Carrinho</button>
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Presunto</h3>
-                    <p class="descricao-toggle" onclick="toggleDescricao(this)">Selecionar Quantidade ▼</p>
-                    <div class="descricao-opcoes">
-                        <label><input type="radio" name="Presunto" value="300g" data-preco="12.00"> 300g -
-                            R$12,00</label><br>
-                        <label><input type="radio" name="Presunto" value="500g" data-preco="17.00"> 500g - R$
-                            17,00</label><br>
-                        <label><input type="radio" name="Presunto" value="750g" data-preco="23.00"> 750g - R$
-                            23,00</label>
-                    </div>
-                    <button onclick="addToCart('Carne')">Adicionar ao Carrinho</button>
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Cheddar</h3>
-                    <p class="descricao-toggle" onclick="toggleDescricao(this)">Selecionar Quantidade ▼</p>
-                    <div class="descricao-opcoes">
-                        <label><input type="radio" name="Cheddar" value="300g" data-preco="12.00"> 300g -
-                            R$12,00</label><br>
-                        <label><input type="radio" name="Cheddar" value="500g" data-preco="17.00"> 500g - R$
-                            17,00</label><br>
-                        <label><input type="radio" name="Cheddar" value="750g" data-preco="23.00"> 750g - R$
-                            23,00</label>
-                    </div>
-                    <button onclick="addToCart('Carne')">Adicionar ao Carrinho</button>
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Catupiry</h3>
-                    <p class="descricao-toggle" onclick="toggleDescricao(this)">Selecionar Quantidade ▼</p>
-                    <div class="descricao-opcoes">
-                        <label><input type="radio" name="Catupiry" value="300g" data-preco="12.00"> 300g -
-                            R$12,00</label><br>
-                        <label><input type="radio" name="Catupiry" value="500g" data-preco="17.00"> 500g - R$
-                            17,00</label><br>
-                        <label><input type="radio" name="Catupiry" value="750g" data-preco="23.00"> 750g - R$
-                            23,00</label>
-                    </div>
-                    <button onclick="addToCart('Carne')">Adicionar ao Carrinho</button>
-                </div>
-            </div>
-        </section>
-
-        <!--Bebidas -->
-        <section id="bebidas" class="menu-section">
-            <h2><img src="img/refrigerantes.png" alt="Lanches" class="section-icon"> Bebidas</h2>
-            <div class="menu-items">
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Cotuba 2L</h3>
-                    <p>R$ 9,00</p>
-                    <p class="descricao"></p>
-                    <button onclick="addToCart('Cotuba 2L', 9.00)">
-                        Adicionar ao Carrinho
-                    </button>
-
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Roller</h3>
-                    <p>R$ 9,00</p>
-                    <p class="descricao"></p>
-                    <button onclick="addToCart('Roller 2L', 9.00)">
-                        Adicionar ao Carrinho
-                    </button>
-
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Coca Cola 2L</h3>
-                    <p>R$ 12,00</p>
-                    <p class="descricao"></p>
-                    <button onclick="addToCart('Coca Cola 2L', 12.00)">
-                        Adicionar ao Carrinho
-                    </button>
-
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Coca Cola Lata</h3>
-                    <p>R$ 4,00</p>
-                    <p class="descricao"></p>
-                    <button onclick="addToCart('Coca Cola Lata ', 4.00)">
-                        Adicionar ao Carrinho
-                    </button>
-
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Fanta Lata</h3>
-                    <p>R$ 4,00</p>
-                    <p class="descricao"></p>
-                    <button onclick="addToCart('Fanta Lata ', 4.00)">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Skol Lata</h3>
-                    <p>R$ 4,00</p>
-                    <p class="descricao"></p>
-                    <button onclick="addToCart('Skol Lata ', 4.00)">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Antartica Lata</h3>
-                    <p>R$ 4,00</p>
-                    <p class="descricao"></p>
-                    <button onclick="addToCart('Antartica Lata ', 4.00)">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Roller 600ML</h3>
-                    <p>R$ 4,00</p>
-                    <p class="descricao"></p>
-                    <button onclick="addToCart('Roller 600ML ',4.00)">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Poty 600ML</h3>
-                    <p>R$ 4,00</p>
-                    <p class="descricao"></p>
-                    <button onclick="addToCart('Poty 600ML ', 4.00)">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-
-                <div class="card">
-                    <img src="img/burguer.png" alt="Burger">
-                    <h3>Água Com Gás</h3>
-                    <p>R$ 2,50</p>
-                    <p class="descricao"></p>
-                    <button onclick="addToCart('Água Com Gás ', 2.50)">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-
-                <div class="card">
-                    <img src="img/cotuba.png" alt="Cotuba 2L">
-                    <h3>Água</h3>
-                    <p>R$ 2,50</p>
-                    <p class="descricao">Refrigerante sabor cola</p>
-                    <button onclick="addToCart('Água Sem Gas', 2.50, 'img/cotuba.png', '')">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-
-
-            </div>
-        </section>
-
+            <!-- Outros itens do cardápio aqui -->
+        </div>
     </main>
 
-    <!-- Seção do Carrinho -->
-    <section id="cart" class="menu-section">
-        <h2>🛒 Carrinho</h2>
-        <div id="cart-display"></div>
-        <button onclick="sendToWhatsApp()" style="margin-top: 10px; background: #25D366; color: #fff;">Enviar Pedido
-            para WhatsApp</button>
-    </section>
-
-    <!-- Pop-up Detalhes -->
-    <div id="details-popup" class="popup hidden">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closeDetails()">&times;</span>
-            <h2 id="popup-title"></h2>
-            <p id="popup-description"></p>
-        </div>
-    </div>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>📍 Hora do Lanche</h3>
-                <p>&copy; 2024 Hora do Lanche. Todos os direitos reservados.</p>
-                <p>Sabor que alimenta seu dia!</p>
-            </div>
-            <div class="footer-section">
-                <h3>👤 Desenvolvedor</h3>
-                <p>Feito com muito <span class="heart">❤️</span> por <strong>Gustavo Lanjoni</strong></p>
-                <p><a href="mailto:gustavosilva94514@gmail.com">gustavosilva94514@gmail.com</a></p>
-
-            </div>
-            <div class="footer-section">
-                <h3>🌐 Redes Sociais</h3>
-                <ul class="social-links">
-                    <li><a href="https://www.facebook.com" target="_blank"><img
-                                src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                                alt="Facebook" /> Facebook</a></li>
-                    <li><a href="https://www.instagram.com/ahoradolanche_1545/" target="_blank"><img
-                                src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
-                                alt="Instagram" /> Instagram</a></li>
-                </ul>
-            </div>
-        </div>
+    <footer class="footer">
+        <p>&copy; 2025 Hora Do Lanche. Todos os direitos reservados.</p>
     </footer>
 
-  
-</body>
+    <script src="js/script.js"></script>
+    <script>
+        // Função para adicionar o item ao carrinho
+        function adicionarAoCarrinho(item) {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || []; // Pega os itens do carrinho armazenados ou cria um carrinho vazio
+            
+            // Verifica se o item já existe no carrinho
+            let itemExistente = carrinho.find(i => i.nome === item.nome);
+            
+            if (itemExistente) {
+                // Se o item já existe, soma a quantidade
+                itemExistente.quantidade = parseInt(itemExistente.quantidade) + parseInt(item.quantidade);
+            } else {
+                // Se não existir, adiciona o item
+                carrinho.push(item);
+            }
+            
+            // Salva o carrinho novamente no localStorage
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+        
+            // Atualiza a contagem do carrinho
+            atualizarCarrinho();
+        }
+        
+        // Função para pegar os dados do item (lanche) e passar para a função de adicionar
+        function getItemData(button) {
+            let itemData = button.closest('.menu-item'); // Encontra o item mais próximo (pai)
+        
+            let item = {
+                nome: itemData.querySelector('h3').textContent,
+                descricao: itemData.querySelector('p').textContent,
+                preco: itemData.querySelector('.price').textContent,
+                imagem: itemData.querySelector('img').src,
+                quantidade: itemData.querySelector('.quantity').value // Pega a quantidade
+            };
+        
+            adicionarAoCarrinho(item);
+        }
+        
+        // Associa a função de adicionar ao carrinho aos botões
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                getItemData(this);
+            });
+        });
 
+        // Função para atualizar a contagem do carrinho
+        function atualizarCarrinho() {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            let quantidadeItens = 0;
+            // Conta o número total de itens no carrinho, considerando as quantidades
+            carrinho.forEach(item => {
+                quantidadeItens += parseInt(item.quantidade);
+            });
+            document.getElementById('cart-count').textContent = quantidadeItens; // Atualiza o contador no carrinho
+        }
+
+        // Atualiza a contagem do carrinho ao carregar a página
+        atualizarCarrinho();
+
+        // Função para aumentar ou diminuir a quantidade
+        document.querySelectorAll('.quantity-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                let input = this.closest('.quantity-control').querySelector('.quantity');
+                let currentValue = parseInt(input.value);
+                
+                if (this.dataset.action === 'increase') {
+                    input.value = currentValue + 1;
+                } else if (this.dataset.action === 'decrease' && currentValue > 1) {
+                    input.value = currentValue - 1;
+                }
+            });
+        });
+    </script>
+</body>
 </html>

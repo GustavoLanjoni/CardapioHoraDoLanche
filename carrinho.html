@@ -3,31 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho</title>
-    <link rel="stylesheet" href="css/carrinho.css">
-    <script src="js/carrinho.js" defer></script>
-    <script src="js/whatsapp.js"></script>
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="css/carrinho.css"> <!-- Vinculando o arquivo CSS -->
 </head>
 <body>
     <header>
-        <h1>🛒 Carrinho (<span id="cart-count">0</span> itens)</h1>
-        <a href="index.html">← Voltar para Cardápio</a>
+        <h1>Seu Carrinho</h1>
+        <nav>
+            <a href="index.html">Voltar ao Cardápio</a>
+        </nav>
     </header>
-    
-    <main>
-        <section id="cart">
-            <h2>Seus Itens</h2>
-            <div id="cart-display"></div> <!-- Onde os itens vão aparecer -->
-            <div id="cart-total">
-                <h3>Total: R$ <span id="total-price">0.00</span></h3>
-            </div>
-        </section>
+
+    <main class="cart">
+        <h2>Itens no Carrinho</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <p>Total: R$ <span id="total-price">0,00</span></p>
+            <button class="checkout">Finalizar Compra</button>
+        </div>
     </main>
 
     <footer>
-        <button onclick="sendToWhatsApp()" style="margin-top: 10px; background: #25D366; color: #fff;">
-            Enviar Pedido para WhatsApp
-        </button>
+        <p>&copy; 2025 Hora Do Lanche - Todos os direitos reservados</p>
     </footer>
+
+    <script>
+        // Função para carregar os itens do carrinho
+        function carregarCarrinho() {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || []; // Pega os itens armazenados no localStorage
+
+            const cartItemsContainer = document.getElementById('cart-items');
+            const totalPriceElement = document.getElementById('total-price');
+            let total = 0;
+
+            // Limpa os itens atuais do carrinho na tela antes de recarregar
+            cartItemsContainer.innerHTML = '';
+
+            carrinho.forEach(item => {
+                let cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `
+                    <img src="${item.imagem}" alt="${item.nome}" class="item-image">
+                    <div class="item-details">
+                        <h3>${item.nome}</h3>
+                        <p>${item.descricao}</p>
+                        <span class="price">${item.preco}</span>
+                    </div>
+                    <div class="cart-item-actions">
+                        <input type="number" value="${item.quantidade}" min="1" data-item="${item.nome}">
+                        <button class="remove-item" data-item="${item.nome}">Remover</button>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(cartItem);
+
+                // Calcula o total
+                total += parseFloat(item.preco.replace('R$', '').replace(',', '.')) * item.quantidade;
+            });
+
+            totalPriceElement.textContent = total.toFixed(2);
+        }
+
+        // Função para remover um item do carrinho
+        function removerItem(itemName) {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+            // Filtra o carrinho, removendo o item com o nome correspondente
+            carrinho = carrinho.filter(item => item.nome !== itemName);
+
+            // Atualiza o localStorage
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+            // Recarrega o carrinho para refletir as mudanças na interface
+            carregarCarrinho();
+        }
+
+        // Associa a ação de remover item
+        document.getElementById('cart-items').addEventListener('click', function(e) {
+            if (e.target.classList.contains('remove-item')) {
+                const itemName = e.target.getAttribute('data-item');
+                removerItem(itemName);
+            }
+        });
+
+        // Carrega os itens ao carregar a página
+        window.onload = carregarCarrinho;
+    </script>
 </body>
 </html>
