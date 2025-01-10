@@ -45,3 +45,5 @@ cartBtn.addEventListener('click', () => {
 closeCartBtn.addEventListener('click', () => {
     cartDiv.style.display = 'none';
 });
+
+
