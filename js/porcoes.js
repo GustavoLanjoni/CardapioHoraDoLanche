@@ -10,12 +10,13 @@ function adicionarPorcaoAoCarrinho(item) {
         itemExistente.quantidade += item.quantidade;
     } else {
         // Se o item não existir, adiciona ele ao carrinho
+        item.preco = `R$${item.preco.toFixed(2).replace('.', ',')}`; // Formata o preço com "R$"
         carrinho.push(item);
     }
 
     // Salva o carrinho atualizado no localStorage
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
-    atualizarCarrinho();  // Atualiza a contagem do carrinho
+    atualizarCarrinho(); // Atualiza a contagem do carrinho
 }
 
 // Função para obter os dados da porção e adicioná-la ao carrinho
@@ -34,7 +35,7 @@ function getPorcaoData(button) {
         nome: nomeComPeso,  // Nome da porção com peso
         imagem: button.dataset.image,
         peso: peso,  // Peso em gramas
-        preco: preco, // Preço (já com o valor unitário)
+        preco: preco, // Preço unitário
         quantidade: 1
     };
 
@@ -47,6 +48,27 @@ function atualizarCarrinho() {
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     let quantidadeItens = carrinho.reduce((total, item) => total + item.quantidade, 0);
     document.getElementById('cart-count').textContent = quantidadeItens;
+
+    // Atualiza a exibição do carrinho (exemplo para renderizar os itens em uma lista)
+    let carrinhoContainer = document.getElementById('carrinho-itens');
+    if (carrinhoContainer) {
+        carrinhoContainer.innerHTML = ""; // Limpa o carrinho antes de renderizar
+
+        carrinho.forEach(item => {
+            let itemElement = document.createElement('div');
+            itemElement.classList.add('carrinho-item');
+            itemElement.innerHTML = `
+                <img src="${item.imagem}" alt="${item.nome}" class="carrinho-item-imagem">
+                <div class="carrinho-item-detalhes">
+                    <h4>${item.nome}</h4>
+                    <p>Peso: ${item.peso}g</p>
+                    <p>Preço: ${item.preco}</p>
+                    <p>Quantidade: ${item.quantidade}</p>
+                </div>
+            `;
+            carrinhoContainer.appendChild(itemElement);
+        });
+    }
 }
 
 // Adiciona o evento de clique para o botão de adicionar ao carrinho

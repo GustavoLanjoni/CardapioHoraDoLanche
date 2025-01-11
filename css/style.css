@@ -330,3 +330,9 @@ footer {
 }
 
 
+@media (max-width: 768px) {
+    .menu-items {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
