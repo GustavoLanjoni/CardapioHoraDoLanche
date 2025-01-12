@@ -14,13 +14,38 @@
         <div class="logo">
             <h1>Hora Do Lanche</h1>
         </div>
-        <nav>
+        <!-- Menu de navegação para desktop -->
+        <nav class="nav-desktop">
+            <a href="lanches.html" class="nav-link">Lanches</a>
+            <a href="linha-x.html" class="nav-link">Linha X</a>
+            <a href="porcoes.html" class="nav-link">Porções</a>
+            <a href="coxinhas.html" class="nav-link">Coxinhas</a>
+            <a href="bebidas.html" class="nav-link">Bebidas</a>
             <a href="carrinho.html" class="cart-link">
                 <img src="img/carrinho-de-compras.png" alt="Carrinho">
-                <span class="cart-count" id="cart-count">0</span> <!-- Mostra a quantidade de itens -->
+                <span class="cart-count" id="cart-count">0</span>
             </a>
         </nav>
+        <!-- Ícone do menu hambúrguer para dispositivos móveis -->
+        <div class="menu-toggle" id="menu-toggle">
+            <img src="img/menu.png" alt="Menu Hambúrguer" width="30" height="30">
+        </div>
     </header>
+    
+    <!-- Menu hambúrguer para dispositivos móveis -->
+    <nav class="nav-mobile" id="nav-mobile">
+        <a href="lanches.html" class="nav-link">Lanches</a>
+        <a href="linha-x.html" class="nav-link">Linha X</a>
+        <a href="porcoes.html" class="nav-link">Porções</a>
+        <a href="coxinhas.html" class="nav-link">Coxinhas</a>
+        <a href="bebidas.html" class="nav-link">Bebidas</a>
+        <a href="carrinho.html" class="cart-link">
+            <img src="img/carrinho-de-compras.png" alt="Carrinho">
+            <span class="cart-count" id="cart-count">0</span>
+        </a>
+    </nav>
+    
+
 
     <main class="menu">
         <h2 class="h2-cardapio">Cardápio</h2>
@@ -140,6 +165,7 @@
             </div>
         </div>
 
+
         <!--Linha X-->
         <h2 class="h2-x">Linha X</h2>
         <div class="menu-items">
@@ -225,68 +251,15 @@
                 </div>
             </div>
 
-            <!--Tirar depois-->
-
-            <div class="menu-item">
-                <img src="img/burguer.png" alt="X-Pizza" class="menu-item-image">
-                <div class="menu-item-info">
-                    <h3>X-Pizza</h3>
-                    <p>Pão, Hambúrgue, Tomate, Presunto, Queijo, Oregano, Ketchup, Maionese, Mostarda</p>
-                    <span class="price">R$ 12,00</span>
-                    <div class="quantity-control">
-                        <button class="quantity-btn" data-action="decrease">-</button>
-                        <input type="number" class="quantity" value="1" min="1">
-                        <button class="quantity-btn" data-action="increase">+</button>
-                    </div>
-                    <button class="add-to-cart" data-name="X-Pizza" data-price="12.00"
-                        data-image="img/refrigerante.png">Adicionar ao Carrinho</button>
-                </div>
-            </div>
-
-            <div class="menu-item">
-                <img src="img/burguer.png" alt="X-Pizza" class="menu-item-image">
-                <div class="menu-item-info">
-                    <h3>X-Pizza</h3>
-                    <p>Pão, Hambúrgue, Tomate, Presunto, Queijo, Oregano, Ketchup, Maionese, Mostarda</p>
-                    <span class="price">R$ 12,00</span>
-                    <div class="quantity-control">
-                        <button class="quantity-btn" data-action="decrease">-</button>
-                        <input type="number" class="quantity" value="1" min="1">
-                        <button class="quantity-btn" data-action="increase">+</button>
-                    </div>
-                    <button class="add-to-cart" data-name="X-Pizza" data-price="12.00"
-                        data-image="img/refrigerante.png">Adicionar ao Carrinho</button>
-                </div>
-            </div>
-
-            <div class="menu-item">
-                <img src="img/burguer.png" alt="X-Pizza" class="menu-item-image">
-                <div class="menu-item-info">
-                    <h3>X-Pizza</h3>
-                    <p>Pão, Hambúrgue, Tomate, Presunto, Queijo, Oregano, Ketchup, Maionese, Mostarda</p>
-                    <span class="price">R$ 12,00</span>
-                    <div class="quantity-control">
-                        <button class="quantity-btn" data-action="decrease">-</button>
-                        <input type="number" class="quantity" value="1" min="1">
-                        <button class="quantity-btn" data-action="increase">+</button>
-                    </div>
-                    <button class="add-to-cart" data-name="X-Pizza" data-price="12.00"
-                        data-image="img/refrigerante.png">Adicionar ao Carrinho</button>
-                </div>
-            </div>
-
-            <!--DAQUI PARA CIMA-->
-
-
             <!-- Porções -->
             <h2 class="h2-porcoes">Porções de Batata</h2>
             <div class="menu-item">
-                <img src="img/batatas-fritas.png" alt="X-Pizza" class="menu-item-image">
+                <img src="img/batatas-fritas.png" alt="Batata" class="menu-item-image">
                 <div class="menu-item-info">
-                    <h3>Batata Com Queijo</h3>
+                    <h3>Batata</h3>
                     <p></p>
                     <span class="price"></span>
-            
+
                     <!-- Seletor de Peso -->
                     <div class="portion-options">
                         <label for="portion-size-burger">Escolha o peso:</label>
@@ -296,31 +269,7 @@
                             <option value="750" data-price="23.00">750g - R$23,00</option>
                         </select>
                     </div>
-            
-                    <!-- Botão Adicionar ao Carrinho -->
-                    <button class="add-to-cart" data-name="Batata Com Queijo" data-image="img/">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-            </div>
-            
-            <div class="menu-item">
-                <img src="img/batatas-fritas.png" alt="X-Pizza" class="menu-item-image">
-                <div class="menu-item-info">
-                    <h3>Batata Com Queijo</h3>
-                    <p></p>
-                    <span class="price"></span>
-            
-                    <!-- Seletor de Peso -->
-                    <div class="portion-options">
-                        <label for="portion-size-burger">Escolha o peso:</label>
-                        <select id="portion-size-burger" class="portion-select">
-                            <option value="300" data-price="12.00">300g - R$12,00</option>
-                            <option value="500" data-price="17.00">500g - R$17,00</option>
-                            <option value="750" data-price="23.00">750g - R$23,00</option>
-                        </select>
-                    </div>
-            
+
                     <!-- Botão Adicionar ao Carrinho -->
                     <button class="add-to-cart" data-name="Batata Com Queijo" data-image="img/">
                         Adicionar ao Carrinho
@@ -329,12 +278,12 @@
             </div>
 
             <div class="menu-item">
-                <img src="img/batatas-fritas.png" alt="X-Pizza" class="menu-item-image">
+                <img src="img/batatas-fritas.png" alt="Queijo" class="menu-item-image">
                 <div class="menu-item-info">
                     <h3>Batata Com Queijo</h3>
                     <p></p>
                     <span class="price"></span>
-            
+
                     <!-- Seletor de Peso -->
                     <div class="portion-options">
                         <label for="portion-size-burger">Escolha o peso:</label>
@@ -344,21 +293,21 @@
                             <option value="750" data-price="23.00">750g - R$23,00</option>
                         </select>
                     </div>
-            
+
                     <!-- Botão Adicionar ao Carrinho -->
-                    <button class="add-to-cart" data-name="Batata Com Queijo" data-image="img/">
+                    <button class="add-to-cart" data-name="Batata Com Bacon" data-image="img/">
                         Adicionar ao Carrinho
                     </button>
                 </div>
             </div>
 
             <div class="menu-item">
-                <img src="img/batatas-fritas.png" alt="X-Pizza" class="menu-item-image">
+                <img src="img/batatas-fritas.png" alt="Bacon" class="menu-item-image">
                 <div class="menu-item-info">
-                    <h3>Batata Com Queijo</h3>
+                    <h3>Batata Com Bacon</h3>
                     <p></p>
                     <span class="price"></span>
-            
+
                     <!-- Seletor de Peso -->
                     <div class="portion-options">
                         <label for="portion-size-burger">Escolha o peso:</label>
@@ -368,18 +317,256 @@
                             <option value="750" data-price="23.00">750g - R$23,00</option>
                         </select>
                     </div>
-            
+
                     <!-- Botão Adicionar ao Carrinho -->
-                    <button class="add-to-cart" data-name="Batata Com Queijo" data-image="img/">
+                    <button class="add-to-cart" data-name="Batata Com Bacon" data-image="img/">
                         Adicionar ao Carrinho
                     </button>
                 </div>
             </div>
-            
+
+            <div class="menu-item">
+                <img src="img/batatas-fritas.png" alt="Presunto" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>Batata Com Presunto</h3>
+                    <p></p>
+                    <span class="price"></span>
+
+                    <!-- Seletor de Peso -->
+                    <div class="portion-options">
+                        <label for="portion-size-burger">Escolha o peso:</label>
+                        <select id="portion-size-burger" class="portion-select">
+                            <option value="300" data-price="12.00">300g - R$12,00</option>
+                            <option value="500" data-price="17.00">500g - R$17,00</option>
+                            <option value="750" data-price="23.00">750g - R$23,00</option>
+                        </select>
+                    </div>
+
+                    <!-- Botão Adicionar ao Carrinho -->
+                    <button class="add-to-cart" data-name="Batata Com Presunto" data-image="img/">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/batatas-fritas.png" alt="Cheddar" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>Batata Com Cheddar</h3>
+                    <p></p>
+                    <span class="price"></span>
+
+                    <!-- Seletor de Peso -->
+                    <div class="portion-options">
+                        <label for="portion-size-burger">Escolha o peso:</label>
+                        <select id="portion-size-burger" class="portion-select">
+                            <option value="300" data-price="12.00">300g - R$12,00</option>
+                            <option value="500" data-price="17.00">500g - R$17,00</option>
+                            <option value="750" data-price="23.00">750g - R$23,00</option>
+                        </select>
+                    </div>
+
+                    <!-- Botão Adicionar ao Carrinho -->
+                    <button class="add-to-cart" data-name="Batata Com Cheddar" data-image="img/">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/batatas-fritas.png" alt="Catupiry" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>Batata Com Catupiry</h3>
+                    <p></p>
+                    <span class="price"></span>
+
+                    <!-- Seletor de Peso -->
+                    <div class="portion-options">
+                        <label for="portion-size-burger">Escolha o peso:</label>
+                        <select id="portion-size-burger" class="portion-select">
+                            <option value="300" data-price="12.00">300g - R$12,00</option>
+                            <option value="500" data-price="17.00">500g - R$17,00</option>
+                            <option value="750" data-price="23.00">750g - R$23,00</option>
+                        </select>
+                    </div>
+
+                    <!-- Botão Adicionar ao Carrinho -->
+                    <button class="add-to-cart" data-name="Batata Com Catupiry" data-image="img/">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
 
 
+            <!-- Mini Salgados -->
 
+            <h2 class="h2-coxinha"> Mini Coxinhas</h2>
+            <div class="menu-item">
+                <img src="img/salgadinhos.png" alt="Tradicional" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>Mini Coxinhas com Carne</h3>
+                    <span class="price"></span>
 
+                    <!-- Seletor de Peso -->
+                    <div class="portion-options">
+                        <label for="portion-size-coxinha">Escolha o peso:</label>
+                        <select id="portion-size-coxinha" class="portion-select">
+                            <option value="300" data-price="10.00">300g - R$12,00</option>
+                            <option value="500" data-price="20.00">500g - R$20,00</option>
+                            <option value="1000" data-price="35.00">1kg - R$35,00</option>
+                        </select>
+                    </div>
+
+                    <!-- Botão Adicionar ao Carrinho -->
+                    <button class="add-to-cart" data-name="Mini Coxinhas Carne" data-image="img/coxinhas.png">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/salgadinhos.png" alt="Kibe" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>Mini Coxinhas com Kibe</h3>
+                    <span class="price"></span>
+
+                    <!-- Seletor de Peso -->
+                    <div class="portion-options">
+                        <label for="portion-size-coxinha-requeijao">Escolha o peso:</label>
+                        <select id="portion-size-coxinha-requeijao" class="portion-select">
+                            <option value="300" data-price="10.00">300g - R$12,00</option>
+                            <option value="500" data-price="20.00">500g - R$20,00</option>
+                            <option value="1000" data-price="35.00">1kg - R$35,00</option>
+                        </select>
+                    </div>
+
+                    <!-- Botão Adicionar ao Carrinho -->
+                    <button class="add-to-cart" data-name="Mini Coxinhas com Requeijão"
+                        data-image="img/coxinhas_requeijao.png">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/salgadinhos.png" alt="pizza" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>Mini Coxinhas com Pizza</h3>
+                    <span class="price"></span>
+
+                    <!-- Seletor de Peso -->
+                    <div class="portion-options">
+                        <label for="portion-size-coxinha-requeijao">Escolha o peso:</label>
+                        <select id="portion-size-coxinha-requeijao" class="portion-select">
+                            <option value="300" data-price="10.00">300g - R$12,00</option>
+                            <option value="500" data-price="20.00">500g - R$20,00</option>
+                            <option value="1000" data-price="35.00">1kg - R$35,00</option>
+                        </select>
+                    </div>
+
+                    <!-- Botão Adicionar ao Carrinho -->
+                    <button class="add-to-cart" data-name="Mini Coxinhas com pizza"
+                        data-image="img/coxinhas_requeijao.png">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/salgadinhos.png" alt="frango" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>Mini Coxinhas com Frango</h3>
+                    <span class="price"></span>
+
+                    <!-- Seletor de Peso -->
+                    <div class="portion-options">
+                        <label for="portion-size-coxinha-requeijao">Escolha o peso:</label>
+                        <select id="portion-size-coxinha-requeijao" class="portion-select">
+                            <option value="300" data-price="10.00">300g - R$12,00</option>
+                            <option value="500" data-price="20.00">500g - R$20,00</option>
+                            <option value="1000" data-price="35.00">1kg - R$35,00</option>
+                        </select>
+                    </div>
+
+                    <!-- Botão Adicionar ao Carrinho -->
+                    <button class="add-to-cart" data-name="Mini Coxinhas com frango"
+                        data-image="img/coxinhas_requeijao.png">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/salgadinhos.png" alt="salcinha" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>Mini Coxinhas com Salcinha</h3>
+                    <span class="price"></span>
+
+                    <!-- Seletor de Peso -->
+                    <div class="portion-options">
+                        <label for="portion-size-coxinha-requeijao">Escolha o peso:</label>
+                        <select id="portion-size-coxinha-requeijao" class="portion-select">
+                            <option value="300" data-price="10.00">300g - R$12,00</option>
+                            <option value="500" data-price="20.00">500g - R$20,00</option>
+                            <option value="1000" data-price="35.00">1kg - R$35,00</option>
+                        </select>
+                    </div>
+
+                    <!-- Botão Adicionar ao Carrinho -->
+                    <button class="add-to-cart" data-name="Mini Coxinhas com Salcinha"
+                        data-image="img/coxinhas_requeijao.png">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/salgadinhos.png" alt="Queijo" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>Mini Coxinhas com Queijo</h3>
+                    <span class="price"></span>
+
+                    <!-- Seletor de Peso -->
+                    <div class="portion-options">
+                        <label for="portion-size-coxinha-requeijao">Escolha o peso:</label>
+                        <select id="portion-size-coxinha-requeijao" class="portion-select">
+                            <option value="300" data-price="10.00">300g - R$12,00</option>
+                            <option value="500" data-price="20.00">500g - R$20,00</option>
+                            <option value="1000" data-price="35.00">1kg - R$35,00</option>
+                        </select>
+                    </div>
+
+                    <!-- Botão Adicionar ao Carrinho -->
+                    <button class="add-to-cart" data-name="Mini Coxinhas com Queijo"
+                        data-image="img/coxinhas_requeijao.png">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="img/salgadinhos.png" alt="caçabresa" class="menu-item-image">
+                <div class="menu-item-info">
+                    <h3>Mini Coxinhas com Caçabresa</h3>
+                    <span class="price"></span>
+
+                    <!-- Seletor de Peso -->
+                    <div class="portion-options">
+                        <label for="portion-size-coxinha-requeijao">Escolha o peso:</label>
+                        <select id="portion-size-coxinha-requeijao" class="portion-select">
+                            <option value="300" data-price="10.00">300g - R$12,00</option>
+                            <option value="500" data-price="20.00">500g - R$20,00</option>
+                            <option value="1000" data-price="35.00">1kg - R$35,00</option>
+                        </select>
+                    </div>
+
+                    <!-- Botão Adicionar ao Carrinho -->
+                    <button class="add-to-cart" data-name="Mini Coxinhas com calabresa"
+                        data-image="img/coxinhas_requeijao.png">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
 
 
 
@@ -397,6 +584,7 @@
     <script src="js/script.js"></script>
     <script src="js/mensagem.js"></script>
     <script src="js/porcoes.js"></script>
+    <Script src="js/menu.js"></Script>
 
 
 
