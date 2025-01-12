@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcões</title>
+    <link rel="stylesheet" href="/css/porcoes.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <h1>Hora Do Lanche</h1>
+        </div>
+        <!-- Menu de navegação para desktop -->
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="index.html">Lanches</a></li>
+                <li><a href="porcoes.html">Porções</a></li>
+                <li><a href="coxinhas.html">Coxinhas</a></li>
+                <li><a href="bebidas.html">Bebidas</a></li>
+                <li><a href="carrinho.html">
+                        <img width="30" src="img/carrinho-de-compras.png" alt="Carrinho">
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a></li>
+            </ul>
+        </nav>
+
+
+    </header>
+
+    <!-- Menu hambúrguer para dispositivos móveis -->
+    <nav class="nav-mobile" id="nav-mobile">
+        <ul>
+            <li><a href="lanches.html">Lanches</a></li>
+            <li><a href="linha-x.html">Linha X</a></li>
+            <li><a href="porcoes.html">Porções</a></li>
+            <li><a href="coxinhas.html">Coxinhas</a></li>
+            <li><a href="bebidas.html">Bebidas</a></li>
+            <li><a href="carrinho.html">
+                    <img src="img/carrinho-de-compras.png" alt="Carrinho" class="cart">
+                    <span class="cart-count" id="cart-count">0</span>
+                </a></li>
+        </ul>
+    </nav>
+
+
+
+    <!-- Porções -->
+    <h2 class="h2-porcoes">Porções de Batata</h2>
+    <div class="menu-container">
+        <div class="menu-item">
+            <img src="img/batatas-fritas.png" alt="Batata" class="menu-item-image">
+            <div class="menu-item-info">
+                <h3>Batata</h3>
+                <p></p>
+                <span class="price"></span>
+
+                <!-- Seletor de Peso -->
+                <div class="portion-options">
+                    <label for="portion-size-burger">Escolha o peso:</label>
+                    <select id="portion-size-burger" class="portion-select">
+                        <option value="300" data-price="12.00">300g - R$12,00</option>
+                        <option value="500" data-price="17.00">500g - R$17,00</option>
+                        <option value="750" data-price="23.00">750g - R$23,00</option>
+                    </select>
+                </div>
+
+                <!-- Botão Adicionar ao Carrinho -->
+                <button class="add-to-cart" data-name="Batata Com Queijo" data-image="img/">
+                    Adicionar ao Carrinho
+                </button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="img/batatas-fritas.png" alt="Queijo" class="menu-item-image">
+            <div class="menu-item-info">
+                <h3>Batata Com Queijo</h3>
+                <p></p>
+                <span class="price"></span>
+
+                <!-- Seletor de Peso -->
+                <div class="portion-options">
+                    <label for="portion-size-burger">Escolha o peso:</label>
+                    <select id="portion-size-burger" class="portion-select">
+                        <option value="300" data-price="12.00">300g - R$12,00</option>
+                        <option value="500" data-price="17.00">500g - R$17,00</option>
+                        <option value="750" data-price="23.00">750g - R$23,00</option>
+                    </select>
+                </div>
+
+                <!-- Botão Adicionar ao Carrinho -->
+                <button class="add-to-cart" data-name="Batata Com Bacon" data-image="img/">
+                    Adicionar ao Carrinho
+                </button>
+            </div>
+        </div>
+
+
+
+        <div class="menu-item">
+            <img src="img/batatas-fritas.png" alt="Bacon" class="menu-item-image">
+            <div class="menu-item-info">
+                <h3>Batata Com Bacon</h3>
+                <p></p>
+                <span class="price"></span>
+
+                <!-- Seletor de Peso -->
+                <div class="portion-options">
+                    <label for="portion-size-burger">Escolha o peso:</label>
+                    <select id="portion-size-burger" class="portion-select">
+                        <option value="300" data-price="12.00">300g - R$12,00</option>
+                        <option value="500" data-price="17.00">500g - R$17,00</option>
+                        <option value="750" data-price="23.00">750g - R$23,00</option>
+                    </select>
+                </div>
+
+                <!-- Botão Adicionar ao Carrinho -->
+                <button class="add-to-cart" data-name="Batata Com Bacon" data-image="img/">
+                    Adicionar ao Carrinho
+                </button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="img/batatas-fritas.png" alt="Presunto" class="menu-item-image">
+            <div class="menu-item-info">
+                <h3>Batata Com Presunto</h3>
+                <p></p>
+                <span class="price"></span>
+
+                <!-- Seletor de Peso -->
+                <div class="portion-options">
+                    <label for="portion-size-burger">Escolha o peso:</label>
+                    <select id="portion-size-burger" class="portion-select">
+                        <option value="300" data-price="12.00">300g - R$12,00</option>
+                        <option value="500" data-price="17.00">500g - R$17,00</option>
+                        <option value="750" data-price="23.00">750g - R$23,00</option>
+                    </select>
+                </div>
+
+                <!-- Botão Adicionar ao Carrinho -->
+                <button class="add-to-cart" data-name="Batata Com Presunto" data-image="img/">
+                    Adicionar ao Carrinho
+                </button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="img/batatas-fritas.png" alt="Cheddar" class="menu-item-image">
+            <div class="menu-item-info">
+                <h3>Batata Com Cheddar</h3>
+                <p></p>
+                <span class="price"></span>
+
+                <!-- Seletor de Peso -->
+                <div class="portion-options">
+                    <label for="portion-size-burger">Escolha o peso:</label>
+                    <select id="portion-size-burger" class="portion-select">
+                        <option value="300" data-price="12.00">300g - R$12,00</option>
+                        <option value="500" data-price="17.00">500g - R$17,00</option>
+                        <option value="750" data-price="23.00">750g - R$23,00</option>
+                    </select>
+                </div>
+
+                <!-- Botão Adicionar ao Carrinho -->
+                <button class="add-to-cart" data-name="Batata Com Cheddar" data-image="img/">
+                    Adicionar ao Carrinho
+                </button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="img/batatas-fritas.png" alt="Catupiry" class="menu-item-image">
+            <div class="menu-item-info">
+                <h3>Batata Com Catupiry</h3>
+                <p></p>
+                <span class="price"></span>
+
+                <!-- Seletor de Peso -->
+                <div class="portion-options">
+                    <label for="portion-size-burger">Escolha o peso:</label>
+                    <select id="portion-size-burger" class="portion-select">
+                        <option value="300" data-price="12.00">300g - R$12,00</option>
+                        <option value="500" data-price="17.00">500g - R$17,00</option>
+                        <option value="750" data-price="23.00">750g - R$23,00</option>
+                    </select>
+                </div>
+
+                <!-- Botão Adicionar ao Carrinho -->
+                <button class="add-to-cart" data-name="Batata Com Catupiry" data-image="img/">
+                    Adicionar ao Carrinho
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <script src="js/mensagem.js"></script>
+    <script src="js/porcoes.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/carrinho.js"></script>
+    <script src="#"></script>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Sobre -->
+            <div class="footer-about">
+                <h3>Hora do Lanche</h3>
+                <p>Satisfazendo sua fome com os melhores lanches e porções!<br> Aproveite nossa variedade e qualidade.
+                </p>
+            </div>
+
+            <!-- Links úteis -->
+            <div class="footer-links">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="index.html">Lanches</a></li>
+                    <li><a href="porcoes.html">Porções</a></li>
+                    <li><a href="coxinhas.html">Coxinhas</a></li>
+                    <li><a href="bebidas.html">Bebidas</a></li>
+                </ul>
+            </div>
+
+            <!-- Redes Sociais -->
+            <div class="footer-social">
+                <h4>Siga-nos</h4>
+                <ul>
+                    <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    </li>
+                    <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hora do Lanche. Todos os direitos reservados.
+                Feito com muito <span class="heart">❤️</span> por Gustavo Lanjoni.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script para os lanches -->
+    <script>
+        // Função para adicionar o item ao carrinho
+        function adicionarAoCarrinho(item) {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+            let itemExistente = carrinho.find(i => i.nome === item.nome);
+
+            if (itemExistente) {
+                itemExistente.quantidade = parseInt(itemExistente.quantidade) + parseInt(item.quantidade);
+            } else {
+                carrinho.push(item);
+            }
+
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            atualizarCarrinho();
+        }
+
+        // Função para pegar os dados do item (lanche)
+        function getLancheData(button) {
+            let itemData = button.closest('.menu-item');
+
+            let item = {
+                nome: itemData.querySelector('h3').textContent,
+                descricao: itemData.querySelector('p').textContent,
+                preco: itemData.querySelector('.price').textContent,
+                imagem: itemData.querySelector('img').src,
+                quantidade: itemData.querySelector('.quantity').value
+            };
+
+            adicionarAoCarrinho(item);
+        }
+
+        // Função para atualizar a contagem do carrinho
+        function atualizarCarrinho() {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            let quantidadeItens = 0;
+            carrinho.forEach(item => {
+                quantidadeItens += parseInt(item.quantidade);
+            });
+            document.getElementById('cart-count').textContent = quantidadeItens;
+        }
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function () {
+                getLancheData(this);
+            });
+        });
+
+        // Função para aumentar ou diminuir a quantidade
+        document.querySelectorAll('.quantity-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                let input = this.closest('.quantity-control').querySelector('.quantity');
+                let currentValue = parseInt(input.value);
+
+                if (this.dataset.action === 'increase') {
+                    input.value = currentValue + 1;
+                } else if (this.dataset.action === 'decrease' && currentValue > 1) {
+                    input.value = currentValue - 1;
+                }
+            });
+        });
+
+        atualizarCarrinho();
+    </script>
+
+</body>
+
+</html>
