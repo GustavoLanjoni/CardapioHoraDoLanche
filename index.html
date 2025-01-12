@@ -16,35 +16,42 @@
         </div>
         <!-- Menu de navegação para desktop -->
         <nav class="nav-desktop">
-            <a href="lanches.html" class="nav-link">Lanches</a>
-            <a href="linha-x.html" class="nav-link">Linha X</a>
-            <a href="porcoes.html" class="nav-link">Porções</a>
-            <a href="coxinhas.html" class="nav-link">Coxinhas</a>
-            <a href="bebidas.html" class="nav-link">Bebidas</a>
-            <a href="carrinho.html" class="cart-link">
-                <img src="img/carrinho-de-compras.png" alt="Carrinho">
-                <span class="cart-count" id="cart-count">0</span>
-            </a>
+            <ul>
+                <li><a href="lanches.html">Lanches</a></li>
+                <li><a href="linha-x.html">Linha X</a></li>
+                <li><a href="porcoes.html">Porções</a></li>
+                <li><a href="coxinhas.html">Coxinhas</a></li>
+                <li><a href="bebidas.html">Bebidas</a></li>
+                <li><a href="carrinho.html">
+                        <img width="30" src="img/carrinho-de-compras.png" alt="Carrinho">
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a></li>
+            </ul>
         </nav>
         <!-- Ícone do menu hambúrguer para dispositivos móveis -->
         <div class="menu-toggle" id="menu-toggle">
-            <img src="img/menu.png" alt="Menu Hambúrguer" width="30" height="30">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
     </header>
-    
+
     <!-- Menu hambúrguer para dispositivos móveis -->
     <nav class="nav-mobile" id="nav-mobile">
-        <a href="lanches.html" class="nav-link">Lanches</a>
-        <a href="linha-x.html" class="nav-link">Linha X</a>
-        <a href="porcoes.html" class="nav-link">Porções</a>
-        <a href="coxinhas.html" class="nav-link">Coxinhas</a>
-        <a href="bebidas.html" class="nav-link">Bebidas</a>
-        <a href="carrinho.html" class="cart-link">
-            <img src="img/carrinho-de-compras.png" alt="Carrinho">
-            <span class="cart-count" id="cart-count">0</span>
-        </a>
+        <ul>
+            <li><a href="lanches.html">Lanches</a></li>
+            <li><a href="linha-x.html">Linha X</a></li>
+            <li><a href="porcoes.html">Porções</a></li>
+            <li><a href="coxinhas.html">Coxinhas</a></li>
+            <li><a href="bebidas.html">Bebidas</a></li>
+            <li><a href="carrinho.html">
+                    <img src="img/carrinho-de-compras.png" alt="Carrinho">
+                    <span class="cart-count" id="cart-count">0</span>
+                </a></li>
+        </ul>
     </nav>
-    
+
+
 
 
     <main class="menu">
@@ -584,11 +591,23 @@
     <script src="js/script.js"></script>
     <script src="js/mensagem.js"></script>
     <script src="js/porcoes.js"></script>
-    <Script src="js/menu.js"></Script>
 
 
 
 
+    <!--Menu-->
+    <script>
+        // Obtém os elementos do DOM
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMobile = document.getElementById('nav-mobile');
+
+        // Adiciona um ouvinte de evento de clique ao ícone do hambúrguer
+        menuToggle.addEventListener('click', () => {
+            // Alterna a classe 'active' para mostrar ou ocultar o menu móvel
+            navMobile.classList.toggle('active');
+        });
+
+    </script>
 
     <!-- Script para os lanches -->
     <script>
