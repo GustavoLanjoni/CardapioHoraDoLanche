@@ -344,6 +344,37 @@ body {
   box-shadow: 0 0 2px rgba(0, 123, 255, 0.4);
 }
 
+.price {
+
+  font-weight: bold;
+
+}
+
+.cart-message {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 128, 0, 0.9); /* Fundo verde */
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1000;
+  display: none; /* Oculto por padrão */
+  animation: fadeInOut 3s ease-in-out; /* Animação de exibição */
+}
+
+/* Animação de fade in/out */
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 
 /* Responsividade */
 @media (max-width: 1024px) {
@@ -434,5 +465,48 @@ body {
 
   .nav-mobile.active {
       display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-mobile {
+      display: flex;
+      flex-wrap: wrap; /* Permite itens em múltiplas linhas */
+      justify-content: center; /* Centraliza os itens */
+      gap: 10px; /* Espaçamento entre os itens */
+      padding: 10px;
+  }
+
+  .menu-item {
+      flex: 1 1 calc(50% - 10px); /* Cada item ocupa 50% da largura menos o espaçamento */
+      max-width: calc(50% - 10px); /* Garante que cada item tenha a largura correta */
+      aspect-ratio: 1 / 1; /* Torna o item perfeitamente quadrado */
+      background-color: #ffffff; /* Fundo branco */
+      border: 1px solid #e0e0e0; /* Borda leve */
+      border-radius: 5px; /* Bordas levemente arredondadas */
+      display: flex; /* Para centralizar o conteúdo */
+      flex-direction: column; /* Organiza conteúdo em coluna */
+      align-items: center; /* Centraliza horizontalmente */
+      justify-content: center; /* Centraliza verticalmente */
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+      transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .menu-item:hover {
+      background-color: #f5f5f5; /* Leve mudança de cor ao passar o mouse */
+      transform: scale(1.05); /* Pequeno aumento ao passar o mouse */
+  }
+
+  .menu-item img {
+      width: 50%; /* Imagem proporcional ao quadrado */
+      height: auto; /* Mantém a proporção da imagem */
+      margin-bottom: 8px;
+  }
+
+  .menu-item span {
+      font-size: 0.85rem; /* Texto menor para caber bem */
+      color: #333; /* Cor de texto neutra */
   }
 }
