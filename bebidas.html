@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bebidas.css">
+    <title>Hora Do Lanche</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <h1>Hora Do Lanche</h1>
+        </div>
+        <!-- Menu de navegação para desktop -->
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="index.html">Lanches</a></li>
+                <li><a href="coxinhas.html">Porções</a></li>
+                <li><a href="coxinhas.html">Mini Salgado</a></li>
+                <li><a href="carrinho.html">
+                        <img width="30" src="img/carrinho-de-compras.png" alt="Carrinho">
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a></li>
+            </ul>
+        </nav>
+
+
+    </header>
+
+    <!-- Menu hambúrguer para dispositivos móveis -->
+    <nav class="nav-mobile" id="nav-mobile">
+        <ul>
+            <li><a href="lanches.html">Lanches</a></li>
+            <li><a href="porcoes.html">Porções</a></li>
+            <li><a href="coxinhas.html">Coxinhas</a></li>
+            <li><a href="carrinho.html">
+                    <img src="img/carrinho-de-compras.png" alt="Carrinho" class="cart">
+                    <span class="cart-count" id="cart-count">0</span>
+                </a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="menu-container">
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="img/refrigerantes.png" alt="Cotuba" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3>Cotuba 2L</h3>
+                        <p></p>
+                        <span class="price">R$ 9,00</span>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" data-action="decrease">-</button>
+                            <input type="number" class="quantity" value="1" min="1">
+                            <button class="quantity-btn" data-action="increase">+</button>
+                        </div>
+                        <button class="add-to-cart" data-name="HotDog" data-price="9.00"
+                            data-image="img/refrigerantes.png">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="img/refrigerantes.png" alt="Roller" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3>Roller 2L</h3>
+                        <p></p>
+                        <span class="price">R$ 9,00</span>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" data-action="decrease">-</button>
+                            <input type="number" class="quantity" value="1" min="1">
+                            <button class="quantity-btn" data-action="increase">+</button>
+                        </div>
+                        <button class="add-to-cart" data-name="HotDogEspecial" data-price="9.00"
+                            data-image="img/refrigerantes.png">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="img/refrigerantes.png" alt="CocaCola" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3>Coca Cola 2L</h3>
+                        <p></p>
+                        <span class="price">R$ 12,00</span>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" data-action="decrease">-</button>
+                            <input type="number" class="quantity" value="1" min="1">
+                            <button class="quantity-btn" data-action="increase">+</button>
+                        </div>
+                        <button class="add-to-cart" data-name="HotDogEspecialBacon" data-price="12.00"
+                            data-image="img/refrigerantes.png">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="img/refrigerantes.png" alt="CocaLata" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3>Coca Lata</h3>
+                        <p></p>
+                        <span class="price">R$ 4,00</span>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" data-action="decrease">-</button>
+                            <input type="number" class="quantity" value="1" min="1">
+                            <button class="quantity-btn" data-action="increase">+</button>
+                        </div>
+                        <button class="add-to-cart" data-name="CadelaQuente" data-price="4.00"
+                            data-image="img/refrigerantes.png">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="img/refrigerantes.png" alt="FantaLata" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3>Fanta Lata</h3>
+                        <p></p>
+                        <span class="price">R$ 4,00</span>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" data-action="decrease">-</button>
+                            <input type="number" class="quantity" value="1" min="1">
+                            <button class="quantity-btn" data-action="increase">+</button>
+                        </div>
+                        <button class="add-to-cart" data-name="ModaDaCasa" data-price="4.00"
+                            data-image="img/refrigerantes.png">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="img/refrigerantes.png" alt="SkolLata" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3>SkolLata</h3>
+                        <p></p>
+                        <span class="price">R$ 4,00</span>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" data-action="decrease">-</button>
+                            <input type="number" class="quantity" value="1" min="1">
+                            <button class="quantity-btn" data-action="increase">+</button>
+                        </div>
+                        <button class="add-to-cart" data-name="Americano" data-price="4.00"
+                            data-image="img/refrigerantes.png">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="img/refrigerantes.png" alt="AntarticaLata" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3>Antartica Lata</h3>
+                        <p></p>
+                        <span class="price">R$ 12,00</span>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" data-action="decrease">-</button>
+                            <input type="number" class="quantity" value="1" min="1">
+                            <button class="quantity-btn" data-action="increase">+</button>
+                        </div>
+                        <button class="add-to-cart" data-name="MistoQuente" data-price="4.00"
+                            data-image="img/refrigerantes.png">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="img/refrigerantes.png" alt="Agua" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3>Água Com Gás</h3>
+                        <p></p>
+                        <span class="price">R$ 2,50</span>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" data-action="decrease">-</button>
+                            <input type="number" class="quantity" value="1" min="1">
+                            <button class="quantity-btn" data-action="increase">+</button>
+                        </div>
+                        <button class="add-to-cart" data-name="MistoQuente" data-price="2.50"
+                            data-image="img/refrigerantes.png">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="img/refrigerantes.png" alt="Agua" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3>Água</h3>
+                        <p></p>
+                        <span class="price">R$ 2,50</span>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" data-action="decrease">-</button>
+                            <input type="number" class="quantity" value="1" min="1">
+                            <button class="quantity-btn" data-action="increase">+</button>
+                        </div>
+                        <button class="add-to-cart" data-name="MistoQuente" data-price="2.50"
+                            data-image="img/refrigerantes.png">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="img/refrigerantes.png" alt="Roller" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3>Roller 600ML</h3>
+                        <p></p>
+                        <span class="price">R$ 4.00</span>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" data-action="decrease">-</button>
+                            <input type="number" class="quantity" value="1" min="1">
+                            <button class="quantity-btn" data-action="increase">+</button>
+                        </div>
+                        <button class="add-to-cart" data-name="MistoQuente" data-price="4.00"
+                            data-image="img/refrigerantes.png">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="img/refrigerantes.png" alt="Poty" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3>Poty 600ML</h3>
+                        <p></p>
+                        <span class="price">R$ 4.00</span>
+                        <div class="quantity-control">
+                            <button class="quantity-btn" data-action="decrease">-</button>
+                            <input type="number" class="quantity" value="1" min="1">
+                            <button class="quantity-btn" data-action="increase">+</button>
+                        </div>
+                        <button class="add-to-cart" data-name="MistoQuente" data-price="4.00"
+                            data-image="img/refrigerantes.png">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+   
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Sobre -->
+            <div class="footer-about">
+                <h3>Hora do Lanche</h3>
+                <p>Satisfazendo sua fome com os melhores lanches e porções!<br> Aproveite nossa variedade e qualidade.
+                </p>
+            </div>
+
+            <!-- Links úteis -->
+            <div class="footer-links">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="index.html">Lanches</a></li>
+                    <li><a href="porcoes.html">Porções</a></li>
+                    <li><a href="coxinhas.html">Coxinhas</a></li>
+                    <li><a href="bebidas.html">Bebidas</a></li>
+                </ul>
+            </div>
+
+            <!-- Redes Sociais -->
+            <div class="footer-social">
+                <h4>Siga-nos</h4>
+                <ul>
+                    <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    </li>
+                    <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hora do Lanche. Todos os direitos reservados.
+                Feito com muito <span class="heart">❤️</span> por Gustavo Lanjoni.
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/mensagem.js"></script>
+    <script src="js/porcoes.js"></script>
+
+
+
+
+
+
+    <!-- Script para os lanches -->
+    <script>
+        // Função para adicionar o item ao carrinho
+        function adicionarAoCarrinho(item) {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+            let itemExistente = carrinho.find(i => i.nome === item.nome);
+
+            if (itemExistente) {
+                itemExistente.quantidade = parseInt(itemExistente.quantidade) + parseInt(item.quantidade);
+            } else {
+                carrinho.push(item);
+            }
+
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            atualizarCarrinho();
+        }
+
+        // Função para pegar os dados do item (lanche)
+        function getLancheData(button) {
+            let itemData = button.closest('.menu-item');
+
+            let item = {
+                nome: itemData.querySelector('h3').textContent,
+                descricao: itemData.querySelector('p').textContent,
+                preco: itemData.querySelector('.price').textContent,
+                imagem: itemData.querySelector('img').src,
+                quantidade: itemData.querySelector('.quantity').value
+            };
+
+            adicionarAoCarrinho(item);
+        }
+
+        // Função para atualizar a contagem do carrinho
+        function atualizarCarrinho() {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            let quantidadeItens = 0;
+            carrinho.forEach(item => {
+                quantidadeItens += parseInt(item.quantidade);
+            });
+            document.getElementById('cart-count').textContent = quantidadeItens;
+        }
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function () {
+                getLancheData(this);
+            });
+        });
+
+        // Função para aumentar ou diminuir a quantidade
+        document.querySelectorAll('.quantity-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                let input = this.closest('.quantity-control').querySelector('.quantity');
+                let currentValue = parseInt(input.value);
+
+                if (this.dataset.action === 'increase') {
+                    input.value = currentValue + 1;
+                } else if (this.dataset.action === 'decrease' && currentValue > 1) {
+                    input.value = currentValue - 1;
+                }
+            });
+        });
+
+        atualizarCarrinho();
+    </script>
+
+
+
+</body>
+</html>
