@@ -103,7 +103,7 @@ body {
   margin-top: 40px;
   display: flex; /* Exibe os itens lado a lado */
   flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-  gap: 20px; /* Espaçamento entre os itens */
+  gap: 5px; /* Espaçamento entre os itens */
   justify-content: center; /* Centraliza os itens dentro do contêiner */
 
   width: 100%; /* Faz o contêiner ocupar toda a largura disponível */
@@ -500,7 +500,7 @@ body {
   }
 
   .menu-item img {
-      width: 50%; /* Imagem proporcional ao quadrado */
+      width: 150px; /* Imagem proporcional ao quadrado */
       height: auto; /* Mantém a proporção da imagem */
       margin-bottom: 8px;
   }

@@ -103,7 +103,7 @@
     margin-top: 40px;
     display: flex; /* Exibe os itens lado a lado */
     flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-    gap: 20px; /* Espaçamento entre os itens */
+    gap: 5px; /* Espaçamento entre os itens */
     justify-content: center; /* Centraliza os itens dentro do contêiner */
   
     width: 100%; /* Faz o contêiner ocupar toda a largura disponível */
@@ -368,13 +368,93 @@
     animation: fadeInOut 3s ease-in-out; /* Animação de exibição */
 }
 
+
+/* Contêiner principal */
+.quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 3px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  width: fit-content;
+  margin: 0 auto; /* Centraliza o contêiner na página */
+}
+
+/* Botões (+ e -) */
+.quantity-btn {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Efeito ao passar o mouse nos botões */
+.quantity-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Campo de entrada */
+.quantity {
+  width: 40px;
+  height: 25px;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+}
+
+/* Efeito ao focar no campo de entrada */
+.quantity:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 2px rgba(0, 123, 255, 0.4);
+}
+
+.price {
+
+  font-weight: bold;
+
+}
+
+.cart-message {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 128, 0, 0.9); /* Fundo verde */
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1000;
+  display: none; /* Oculto por padrão */
+  animation: fadeInOut 3s ease-in-out; /* Animação de exibição */
+}
+
 /* Animação de fade in/out */
 @keyframes fadeInOut {
-    0% { opacity: 0; }
-    20% { opacity: 1; }
-    80% { opacity: 1; }
-    100% { opacity: 0; }
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
 }
+
 
 
   /* Responsividade */
